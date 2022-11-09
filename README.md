@@ -10,7 +10,7 @@ This terraform module will deploy [metrics-server](https://github.com/kubernetes
 
 | Helm Chart | Repo | Default Values |
 |------------|------|--------|
-| metrics-server | [repo](hhttps://artifacthub.io/packages/helm/metrics-server/metrics-server) | [values](https://artifacthub.io/packages/helm/metrics-server/metrics-server?modal=values) |
+| metrics-server | [repo](https://artifacthub.io/packages/helm/metrics-server/metrics-server) | [values](https://artifacthub.io/packages/helm/metrics-server/metrics-server?modal=values) |
 
 ## Usage
 
