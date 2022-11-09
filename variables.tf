@@ -6,6 +6,7 @@ variable "metrics_server_helm_version" {
 variable "metrics_server_version" {
   description = "metrics-server version"
   type        = string
+  default     = ""
 }
 
 variable "metrics_server_namespace" {

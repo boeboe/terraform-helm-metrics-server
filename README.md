@@ -51,14 +51,15 @@ Check the [examples](examples) for more details.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|----------|
-| metrics_server_helm_version | metrics-server helm version | string | - | true |
-| metrics_server_version | metrics-server version | string | - | false |
-| metrics_server_namespace | metrics-server install namespace | string | "kube-system" | false |
-| metrics_server_helm_repo | metrics-server helm repository | string | "https://istio-release.storage.googleapis.com/charts" | false |
-| metrics_server_settings | metrics-server settings | map | {} | false |
+| Name | Description | Type | Default | Required | Remarks |
+|------|-------------|------|---------|----------|--------|
+| metrics_server_helm_version | metrics-server helm version | string | - | true | |
+| metrics_server_version | metrics-server version | string | "" | false | if not specified, use chart appVersion value |
+| metrics_server_namespace | metrics-server install namespace | string | "kube-system" | false | |
+| metrics_server_helm_repo | metrics-server helm repository | string | "https://istio-release.storage.googleapis.com/charts" | false | |
+| metrics_server_settings | metrics-server settings | map | {} | false | |
 
+> **INFO:** metrics-server container versions available at [this](https://github.com/kubernetes-sigs/metrics-server/releases) release section
 
 ## Outputs
 
@@ -75,8 +76,8 @@ metrics_server_helm_metadata = {
   "chart" = "metrics-server"
   "name" = "metrics-server"
   "namespace" = "kube-system"
-  "revision" = 5
-  "values" = "{\"args\":[\"--kubelet-insecure-tls\",\"--kubelet-preferred-address-types=InternalIP\"],\"metrics\":{\"enabled\":true},\"podAnnotations\":{\"environment\":\"test\",\"owner\":\"test\"}}"
+  "revision" = 3
+  "values" = "{\"args\":[\"--kubelet-insecure-tls\",\"--kubelet-preferred-address-types=InternalIP\"],\"image\":{\"tag\":\"v0.6.0\"},\"metrics\":{\"enabled\":true},\"podAnnotations\":{\"custom.annotation.io\":\"test\",\"environment\":\"test\"}}"
   "version" = "3.8.2"
 }
 ```
