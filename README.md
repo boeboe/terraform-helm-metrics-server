@@ -30,7 +30,7 @@ module "metrics_server" {
   version = "0.0.1"
 
   metrics_server_helm_version = "3.8.2"
-  metrics_server_version      = "0.6.1"
+  metrics_server_version      = "v0.6.1"
 
   metrics_server_settings = {
     "podAnnotations.custom\\.annotation\\.io" = "test"
