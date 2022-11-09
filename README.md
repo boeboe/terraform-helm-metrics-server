@@ -26,7 +26,7 @@ provider "helm" {
 }
 
 module "metrics_server" {
-  source  = "boeboe/istio/helm"
+  source  = "boeboe/metrics-server/helm"
   version = "0.0.1"
 
   metrics_server_helm_version = "3.8.2"
@@ -56,7 +56,7 @@ Check the [examples](examples) for more details.
 | metrics_server_helm_version | metrics-server helm version | string | - | true | |
 | metrics_server_version | metrics-server version | string | "" | false | if not specified, use chart appVersion value |
 | metrics_server_namespace | metrics-server install namespace | string | "kube-system" | false | |
-| metrics_server_helm_repo | metrics-server helm repository | string | "https://istio-release.storage.googleapis.com/charts" | false | |
+| metrics_server_helm_repo | metrics-server helm repository | string | "https://kubernetes-sigs.github.io/metrics-server" | false | |
 | metrics_server_settings | metrics-server settings | map | {} | false | |
 
 > **INFO:** metrics-server container versions available at [this](https://github.com/kubernetes-sigs/metrics-server/releases) release section
