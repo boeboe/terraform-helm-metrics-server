@@ -6,7 +6,7 @@
 [![Open Source Helpers](https://www.codetriage.com/boeboe/terraform-helm-metrics-server/badges/users.svg)](https://www.codetriage.com/boeboe/terraform-helm-metrics-server)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
-This terraform module will deploy [metrics-server](https://github.com/kubernetes-sigs/metrics-server) on any kubernetes cluster, using the official [helm charts](hhttps://artifacthub.io/packages/helm/metrics-server/metrics-server).
+This terraform module will deploy [metrics-server](https://github.com/kubernetes-sigs/metrics-server) on any kubernetes cluster, using the official [helm charts](https://artifacthub.io/packages/helm/metrics-server/metrics-server).
 
 | Helm Chart | Repo | Default Values |
 |------------|------|--------|
